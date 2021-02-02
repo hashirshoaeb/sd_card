@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_file_manager/flutter_file_manager.dart';
+import 'package:open_file/open_file.dart';
 
 class FileList extends StatefulWidget {
   FileList(this.path);
@@ -63,9 +64,12 @@ class _FileList extends State<FileList> {
                   itemCount: files.length,
                   itemBuilder: (context, index) {
                     final String _fileName = files[index].path.split('/').last;
-                    return ListTile(
-                      title: Text(_fileName),
-                      trailing: Icon(Icons.insert_drive_file_outlined),
+                    return InkWell(
+                      onTap: () => OpenFile.open(files[index].path),
+                      child: ListTile(
+                        title: Text(_fileName),
+                        trailing: Icon(Icons.insert_drive_file_outlined),
+                      ),
                     );
                   },
                   separatorBuilder: (context, index) {
