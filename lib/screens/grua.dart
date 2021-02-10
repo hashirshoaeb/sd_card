@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:path_provider_ex/path_provider_ex.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-import './file_list.dart';
+import '../file_list.dart';
 
-class Home extends StatefulWidget {
+class Grua extends StatefulWidget {
   @override
-  _HomeState createState() => _HomeState();
+  _GruaState createState() => _GruaState();
 }
 
-class _HomeState extends State<Home> {
+class _GruaState extends State<Grua> {
   PermissionStatus status = PermissionStatus.undetermined;
   String sdCardRootDirectory = '';
 
