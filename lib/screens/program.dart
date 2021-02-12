@@ -29,8 +29,10 @@ class _ProgramState extends State<Program> {
       ),
       body: ImageStackBody(
           child: Column(
+        mainAxisSize: MainAxisSize.max,
         children: widget.data.actionList.map((e) {
           return MyContainer(
+            width: 300,
             onTap: () => e.action(context),
             child: Text(
               e.name,

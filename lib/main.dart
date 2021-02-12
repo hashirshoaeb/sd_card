@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.yellow,
         // scaffoldBackgroundColor: Colors.black,
-        appBarTheme: AppBarTheme(color: Colors.red[100]),
+        appBarTheme: AppBarTheme(color: Colors.red[900]),
       ),
       home: Home(), //call MyFile List
     );
